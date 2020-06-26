@@ -149,7 +149,7 @@ if __name__ == '__main__':
     # parse argument from command line
     parser = argparse.ArgumentParser(description = 'Event description analyzer')
     parser.add_argument('--descr', '-d', help = 'Event description text')
-    parser.add_argument('--verbose', '-v', help = 'Verbosity of the output', default = 0)
+    parser.add_argument('--verbose', '-v', help = 'Verbosity of the output: 0 for just label predictions(default); 1 for labels and the original event description; >=2 for labels, original text, and preprocessed text', default = 0)
     args = parser.parse_args()
     descr_text = args.descr
     verbose = int(args.verbose)
